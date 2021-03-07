@@ -1,0 +1,13 @@
+<h1>HeartBeats</h1>
+Use <a href="https://iccir919.github.io/pulseWatch/public/index.html">this</a> link to easily sign into FitBit and generate a csv file with your heart rate data.
+Upload that csv file here to hear your heart's beat. Our goal is to use machine learning to build on this beat. We are newbies and spent all our time figuring 
+how to set up this framework.
+
+<form method="post" class="post-form" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload</button>
+  </form>
+
+<a href="./privacypolicy">Privacy Policy</a>
+<a href="./termsofservice">Terms of Service</a>

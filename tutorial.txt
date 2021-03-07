@@ -1,0 +1,38 @@
+Initialize virtual env:
+- run: python -m virtualenv .
+- run: .\scripts\activate
+
+Install Django:
+- run: pip install django djangorestframework (add --user if it doesn't work)
+
+Start project:
+- run: python -m django startproject ‘project_name’ (or python3 depending on version)
+
+Start app:
+- run: python -m django startapp api
+- add api to installed apps in settings.py: 'api.apps.ApiConfig'
+- add rest_framework to installed apps as well
+
+Create urls.py in api- dispatch url from main urls.py to here.
+
+Initialize database:
+- run: python .\manage.py makemigrations (also need to do this whenever you make changes to the database models)
+- then run: python .\manage.py migrate
+
+Run web server:
+- run: cls (creates db.splite3 file)
+- run: python .\manage.py runserver
+- follow http link
+
+Create database model in models.py
+
+(Want fat models and thin views)
+
+Getting python compile errors:
+- add .pylintrc file
+- ctrl+shf+P to open command palette. Type "Preferences: Configure Language Specific Settings", select python
+and paste: 
+    "python.linting.pylintArgs": [
+          "--load-plugins=pylint_django",
+          "--disable=django-not-configured",
+     ]
