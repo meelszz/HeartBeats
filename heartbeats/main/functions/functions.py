@@ -18,4 +18,6 @@ def handle_uploaded_file(file):
     #s.show('midi')
  
     #mf1 = music21.midi.translate.streamToMidiFile(sBach)
-    fp = s.write('midi', fp='main/hbeats.mid')
+    fp = s.write('midi', fp='heartbeats\main\static\hbeats.mid')
+
+    
